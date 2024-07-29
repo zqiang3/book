@@ -1,0 +1,22 @@
+| pages  | date | minutes |
+| ---- | ---- | ---- |
+| 1,5 | 2024.7.29 | 30min |
+
+## How does MySQL work?
+* plugin 
+* logical architecture
+* storage engine: provide API, respond to requests from the server
+* one connetion occupy one thread (threads are cached)
+
+* Connection Management and Security
+* Optimization and Execution
+* Concurrency Control: read/write locks, lock granularity, table locks
+
+
+be responsible for doing sth.
+special care
+locking technology
+lock consume resources
+xxx can suffer (受害，受到影响，不好的影响）
+locking strategy
+keep at bay
