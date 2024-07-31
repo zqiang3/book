@@ -11,6 +11,26 @@
 * Connection Management and Security
 * Optimization and Execution
 * Concurrency Control: read/write locks, lock granularity, table locks
+* transaction logging: sequential IO
+
+## AUTOCOMMIT
+有些命令会导致事务提交，比如某些ddl语句，alter table
+
+* two-phase locking protocol
+* implicit and explicit locking
+lock in share mode
+for update
+lock tables, unlock tables (on server level, not on storage engine)
+
+## MVCC
+innodb, oracle, postgresql
+avoid locking, lover overhead
+see different data at the same time!
+store version number
+
+example
+read the version of the row before or equal to current transaction
+该版本的数据（一定是当前事务之前开始，并且在当前事务之前提交的， 正在进行的事务还没提交，因此也看不到）
 
 
 be responsible for doing sth.
@@ -20,3 +40,10 @@ lock consume resources
 xxx can suffer (受害，受到影响，不好的影响）
 locking strategy
 keep at bay
+
+atomicity: either applied or rolled back (all or nothing, 不存在中间状态，完成到一半）
+indivisible
+
+reflected in database
+
+dead lock, happen when lock same resource, but lock in different order 
